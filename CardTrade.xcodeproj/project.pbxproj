@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		849253F4A05D15AC7010D7CF /* Pods_CardTradeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C59DC0AD30A3532AAD3889E /* Pods_CardTradeTests.framework */; };
 		DE1450A320D2E7C700C6A970 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1450A220D2E7C700C6A970 /* AppDelegate.swift */; };
-		DE1450A520D2E7C700C6A970 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1450A420D2E7C700C6A970 /* ViewController.swift */; };
 		DE1450A820D2E7C700C6A970 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1450A620D2E7C700C6A970 /* Main.storyboard */; };
 		DE1450AA20D2E7C900C6A970 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE1450A920D2E7C900C6A970 /* Assets.xcassets */; };
 		DE1450AD20D2E7C900C6A970 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1450AB20D2E7C900C6A970 /* LaunchScreen.storyboard */; };
 		DE1450B820D2E7C900C6A970 /* CardTradeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1450B720D2E7C900C6A970 /* CardTradeTests.swift */; };
 		DE1450C320D2E7C900C6A970 /* CardTradeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1450C220D2E7C900C6A970 /* CardTradeUITests.swift */; };
+		DEA5BCE420DEA4FB00628166 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5BCE320DEA4FB00628166 /* LoginViewController.swift */; };
 		DEA8050320D38B8A0049790F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DEA8050220D38B890049790F /* Podfile */; };
 		FC1531183953A4F7BAA08F91 /* Pods_CardTrade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42183E96CD744EDD52F443C3 /* Pods_CardTrade.framework */; };
 		FCF2BCE051AEDE81067B75FE /* Pods_CardTradeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9E4A16DFE9F01EE35920EC /* Pods_CardTradeUITests.framework */; };
@@ -49,7 +49,6 @@
 		A17FEA8135753A8F0FBA44C6 /* Pods-CardTrade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardTrade.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardTrade/Pods-CardTrade.debug.xcconfig"; sourceTree = "<group>"; };
 		DE14509F20D2E7C700C6A970 /* CardTrade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardTrade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1450A220D2E7C700C6A970 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE1450A420D2E7C700C6A970 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DE1450A720D2E7C700C6A970 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE1450A920D2E7C900C6A970 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE1450AC20D2E7C900C6A970 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		DE1450BE20D2E7C900C6A970 /* CardTradeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardTradeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1450C220D2E7C900C6A970 /* CardTradeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTradeUITests.swift; sourceTree = "<group>"; };
 		DE1450C420D2E7C900C6A970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEA5BCE320DEA4FB00628166 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DEA8050220D38B890049790F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
@@ -117,6 +117,8 @@
 		DE14509620D2E7C600C6A970 = {
 			isa = PBXGroup;
 			children = (
+				DEA5BCE220DEA4E000628166 /* Entities */,
+				DEA5BCE120DEA4D800628166 /* Controllers */,
 				DEA8050220D38B890049790F /* Podfile */,
 				DE1450A120D2E7C700C6A970 /* CardTrade */,
 				DE1450B620D2E7C900C6A970 /* CardTradeTests */,
@@ -141,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				DE1450A220D2E7C700C6A970 /* AppDelegate.swift */,
-				DE1450A420D2E7C700C6A970 /* ViewController.swift */,
 				DE1450A620D2E7C700C6A970 /* Main.storyboard */,
 				DE1450A920D2E7C900C6A970 /* Assets.xcassets */,
 				DE1450AB20D2E7C900C6A970 /* LaunchScreen.storyboard */,
@@ -166,6 +167,21 @@
 				DE1450C420D2E7C900C6A970 /* Info.plist */,
 			);
 			path = CardTradeUITests;
+			sourceTree = "<group>";
+		};
+		DEA5BCE120DEA4D800628166 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DEA5BCE320DEA4FB00628166 /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DEA5BCE220DEA4E000628166 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,7 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE1450A520D2E7C700C6A970 /* ViewController.swift in Sources */,
+				DEA5BCE420DEA4FB00628166 /* LoginViewController.swift in Sources */,
 				DE1450A320D2E7C700C6A970 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
