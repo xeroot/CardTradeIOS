@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login Fast"/>
                                 <connections>
-                                    <segue destination="51r-KO-NsQ" kind="show" id="ZWd-qc-0ho"/>
+                                    <action selector="btnLoginPressed:" destination="FZP-WD-56m" eventType="touchUpInside" id="3ke-zs-JNn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTg-pU-iuu">
@@ -31,19 +31,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Validate Login"/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6nm-Xz-hAi">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Gabo" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6nm-Xz-hAi">
                                 <rect key="frame" x="49" y="318" width="287" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NUQ-WP-haB">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="admin" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NUQ-WP-haB">
                                 <rect key="frame" x="49" y="384" width="287" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" Card Trade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAC-ir-oiJ">
                                 <rect key="frame" x="120" y="225" width="135" height="41"/>
@@ -61,7 +61,9 @@
                         <viewLayoutGuide key="safeArea" id="tA0-jR-sUc"/>
                     </view>
                     <connections>
-                        <segue destination="51r-KO-NsQ" kind="show" id="Vlq-0L-t0T"/>
+                        <outlet property="txtPassword" destination="NUQ-WP-haB" id="ili-mR-Nz4"/>
+                        <outlet property="txtUsername" destination="6nm-Xz-hAi" id="jcT-th-ULm"/>
+                        <segue destination="51r-KO-NsQ" kind="show" identifier="login" id="Vlq-0L-t0T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TZt-yj-az0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -122,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="1897" y="-1281"/>
         </scene>
-        <!--profile-->
+        <!--Profile-->
         <scene sceneID="AYl-EB-JS8">
             <objects>
-                <viewController id="CIL-t0-oAC" sceneMemberID="viewController">
+                <viewController id="CIL-t0-oAC" customClass="ProfileViewController" customModule="CardTrade" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CsR-8x-kTA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,9 +213,6 @@
                                 <rect key="frame" x="35" y="516" width="114" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Reglas"/>
-                                <connections>
-                                    <segue destination="EGt-J0-VY1" kind="show" id="h6E-Rq-D7C"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2S-ge-b4u">
                                 <rect key="frame" x="193" y="516" width="120" height="30"/>
@@ -260,29 +259,22 @@
                         <viewLayoutGuide key="safeArea" id="Ayr-XP-Cgk"/>
                     </view>
                     <tabBarItem key="tabBarItem" enabled="NO" title="" id="YJ3-zY-yPO"/>
-                    <navigationItem key="navigationItem" title="profile" id="Xbp-KD-wii">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="dwz-je-4WZ"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Profile" id="Xbp-KD-wii"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="txtAddress" destination="eUo-mZ-QA3" id="eTq-GE-Vcd"/>
+                        <outlet property="txtAge" destination="u1Z-ad-gjS" id="FZD-Ru-XOO"/>
+                        <outlet property="txtCoin" destination="0Nd-hk-beP" id="Rj9-i5-z8i"/>
+                        <outlet property="txtEmail" destination="sCT-Y5-Jhs" id="zcK-J2-h19"/>
+                        <outlet property="txtGender" destination="dGb-mv-QCO" id="kOA-hm-lE5"/>
+                        <outlet property="txtName" destination="tOC-wH-XRD" id="zlM-5m-ADO"/>
+                        <outlet property="txtPhone" destination="fGA-jZ-VS0" id="1NI-uF-fNy"/>
+                        <outlet property="txtRating" destination="kzC-8C-5HM" id="eNQ-Iw-F2R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uC0-zc-yrt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2662" y="-1281"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="ou7-MZ-ST4">
-            <objects>
-                <viewController id="EGt-J0-VY1" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jme-ff-PXA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Oxc-p3-X6f"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zy4-xj-TmV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3417" y="-1284"/>
         </scene>
         <!--notification-->
         <scene sceneID="T77-G2-mLf">
@@ -374,7 +366,4 @@
         <image name="silueta-de-usuario.png" width="16" height="16"/>
         <image name="subasta.png" width="16" height="16"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Vlq-0L-t0T"/>
-    </inferredMetricsTieBreakers>
 </document>
