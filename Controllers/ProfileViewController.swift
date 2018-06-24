@@ -23,6 +23,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var txtAddress: UITextField!
     let myProfile = profile()
     
+    @IBOutlet weak var PopupView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         let userDefaults = UserDefaults.standard
@@ -53,15 +54,23 @@ class ProfileViewController: UIViewController {
                 self.txtAddress.text = self.myProfile.Address
             }
         }
+        PopupView.layer.cornerRadius = 10
+        PopupView.layer.masksToBounds = true
+    }
+    
+    @IBOutlet weak var centerPopup: NSLayoutConstraint!
+    @IBAction func cancelLogout(_ sender: Any) {
+        PopupView.isHidden = true
+        
         
     }
-    override func viewDidAppear(_ animated: Bool) {
+    
+    @IBAction func ShowPopup(_ sender: Any) {
+        PopupView.isHidden = false
         
-        
-        // Do any additional setup after loading the view.
-        
+       
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
