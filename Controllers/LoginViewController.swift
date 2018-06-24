@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var txtUsername: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +26,42 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    // ya :v
+    @IBAction func btnLoginPressed(_ sender: Any) {
+        //Validate login
+        Alamofire.request("http://192.168.1.2:45455/api/Users?username=" + txtUsername.text! + "&password=" + txtPassword.text!).responseJSON { response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")                         // response serialization result
+            
+            if let json = response.result.value {
+                print("JSON: \(json)") // serialized json response
+            }
+            
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                print("Data: \(utf8Text)") // original server data as UTF8 string
+            }
+            
+            let sJson = JSON(response.result.value)
+            if(sJson["Id"] != JSON.null){
+              //  print(sJson["Id"])
+               // print(sJson["Name"])
+               // print(sJson["Rating"])
+               
+                
+                let userDefaults = UserDefaults.standard
+                userDefaults.set(sJson["Id"].intValue, forKey: "UserId")
+                
+                self.performSegue(withIdentifier: "login", sender: nil)
+            }
+            else{
+                let alert = UIAlertController(title: "Fail!", message: "Invalid credentials!", preferredStyle: UIAlertControllerStyle.actionSheet)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.destructive, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 
