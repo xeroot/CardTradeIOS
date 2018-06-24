@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		849253F4A05D15AC7010D7CF /* Pods_CardTradeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C59DC0AD30A3532AAD3889E /* Pods_CardTradeTests.framework */; };
+		DE140F6620DF03B0000547D5 /* dataset-original.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE140F6520DF03B0000547D5 /* dataset-original.jpg */; };
+		DE140F7020DF1931000547D5 /* casa-2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE140F6F20DF1931000547D5 /* casa-2.png */; };
+		DE140F7520DF19F5000547D5 /* notificacion-2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE140F7220DF19F5000547D5 /* notificacion-2.png */; };
+		DE140F7620DF19F5000547D5 /* subasta.png in Resources */ = {isa = PBXBuildFile; fileRef = DE140F7320DF19F5000547D5 /* subasta.png */; };
+		DE140F7820DF1A6E000547D5 /* silueta-de-usuario.png in Resources */ = {isa = PBXBuildFile; fileRef = DE140F7720DF1A6E000547D5 /* silueta-de-usuario.png */; };
+		DE140F7A20DF3253000547D5 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE140F7920DF3253000547D5 /* UserTableViewController.swift */; };
+		DE140F7F20DF4261000547D5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE140F7E20DF4261000547D5 /* User.swift */; };
 		DE1450A320D2E7C700C6A970 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1450A220D2E7C700C6A970 /* AppDelegate.swift */; };
 		DE1450A820D2E7C700C6A970 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1450A620D2E7C700C6A970 /* Main.storyboard */; };
 		DE1450AA20D2E7C900C6A970 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE1450A920D2E7C900C6A970 /* Assets.xcassets */; };
@@ -47,6 +54,13 @@
 		8341D786B6DDD3A2703F1B98 /* Pods-CardTradeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardTradeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardTradeTests/Pods-CardTradeTests.release.xcconfig"; sourceTree = "<group>"; };
 		8C33B318B62B7F496EA0EC42 /* Pods-CardTradeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardTradeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardTradeUITests/Pods-CardTradeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A17FEA8135753A8F0FBA44C6 /* Pods-CardTrade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardTrade.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardTrade/Pods-CardTrade.debug.xcconfig"; sourceTree = "<group>"; };
+		DE140F6520DF03B0000547D5 /* dataset-original.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "dataset-original.jpg"; path = "../../../../Downloads/dataset-original.jpg"; sourceTree = "<group>"; };
+		DE140F6F20DF1931000547D5 /* casa-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "casa-2.png"; path = "../../../../Downloads/casa-2.png"; sourceTree = "<group>"; };
+		DE140F7220DF19F5000547D5 /* notificacion-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "notificacion-2.png"; path = "../../../../Downloads/notificacion-2.png"; sourceTree = "<group>"; };
+		DE140F7320DF19F5000547D5 /* subasta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = subasta.png; path = ../../../../Downloads/subasta.png; sourceTree = "<group>"; };
+		DE140F7720DF1A6E000547D5 /* silueta-de-usuario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "silueta-de-usuario.png"; path = "../../../../Downloads/silueta-de-usuario.png"; sourceTree = "<group>"; };
+		DE140F7920DF3253000547D5 /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
+		DE140F7E20DF4261000547D5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DE14509F20D2E7C700C6A970 /* CardTrade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardTrade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1450A220D2E7C700C6A970 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE1450A720D2E7C700C6A970 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,9 +128,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DE140F6420DF02F3000547D5 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				DE140F7720DF1A6E000547D5 /* silueta-de-usuario.png */,
+				DE140F6F20DF1931000547D5 /* casa-2.png */,
+				DE140F7220DF19F5000547D5 /* notificacion-2.png */,
+				DE140F7320DF19F5000547D5 /* subasta.png */,
+				DE140F6520DF03B0000547D5 /* dataset-original.jpg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		DE14509620D2E7C600C6A970 = {
 			isa = PBXGroup;
 			children = (
+				DE140F6420DF02F3000547D5 /* images */,
 				DEA5BCE220DEA4E000628166 /* Entities */,
 				DEA5BCE120DEA4D800628166 /* Controllers */,
 				DEA8050220D38B890049790F /* Podfile */,
@@ -173,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				DEA5BCE320DEA4FB00628166 /* LoginViewController.swift */,
+				DE140F7920DF3253000547D5 /* UserTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -180,6 +208,7 @@
 		DEA5BCE220DEA4E000628166 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				DE140F7E20DF4261000547D5 /* User.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -293,9 +322,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE1450AD20D2E7C900C6A970 /* LaunchScreen.storyboard in Resources */,
+				DE140F6620DF03B0000547D5 /* dataset-original.jpg in Resources */,
+				DE140F7520DF19F5000547D5 /* notificacion-2.png in Resources */,
 				DE1450AA20D2E7C900C6A970 /* Assets.xcassets in Resources */,
+				DE140F7620DF19F5000547D5 /* subasta.png in Resources */,
+				DE140F7820DF1A6E000547D5 /* silueta-de-usuario.png in Resources */,
 				DEA8050320D38B8A0049790F /* Podfile in Resources */,
 				DE1450A820D2E7C700C6A970 /* Main.storyboard in Resources */,
+				DE140F7020DF1931000547D5 /* casa-2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,7 +431,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE140F7F20DF4261000547D5 /* User.swift in Sources */,
 				DEA5BCE420DEA4FB00628166 /* LoginViewController.swift in Sources */,
+				DE140F7A20DF3253000547D5 /* UserTableViewController.swift in Sources */,
 				DE1450A320D2E7C700C6A970 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
