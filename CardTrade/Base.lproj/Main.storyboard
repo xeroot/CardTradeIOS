@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FZP-WD-56m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FZP-WD-56m">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,17 +19,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1L-zT-49L">
-                                <rect key="frame" x="152" y="440" width="71" height="30"/>
+                                <rect key="frame" x="169" y="440" width="38" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Login Fast"/>
+                                <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="btnLoginPressed:" destination="FZP-WD-56m" eventType="touchUpInside" id="3ke-zs-JNn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTg-pU-iuu">
-                                <rect key="frame" x="139" y="478" width="97" height="30"/>
+                                <rect key="frame" x="159" y="478" width="57" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Validate Login"/>
+                                <state key="normal" title="Register"/>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Gabo" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6nm-Xz-hAi">
                                 <rect key="frame" x="49" y="318" width="287" height="30"/>
@@ -507,7 +507,7 @@
     </scenes>
     <resources>
         <image name="casa-2.png" width="16" height="16"/>
-        <image name="dataset-original.jpg" width="1920" height="1080"/>
+        <image name="dataset-original.jpg" width="730" height="280"/>
         <image name="notificacion-2.png" width="16" height="16"/>
         <image name="silueta-de-usuario.png" width="16" height="16"/>
         <image name="subasta.png" width="16" height="16"/>

@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F71814520E11BE300C569F6 /* dataset-original.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F71814020E11BE200C569F6 /* dataset-original.jpg */; };
+		7F71814620E11BE300C569F6 /* casa-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F71814120E11BE200C569F6 /* casa-2.png */; };
+		7F71814720E11BE300C569F6 /* subasta.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F71814220E11BE200C569F6 /* subasta.png */; };
+		7F71814820E11BE300C569F6 /* silueta-de-usuario.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F71814320E11BE200C569F6 /* silueta-de-usuario.png */; };
+		7F71814920E11BE300C569F6 /* notificacion-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F71814420E11BE300C569F6 /* notificacion-2.png */; };
 		849253F4A05D15AC7010D7CF /* Pods_CardTradeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C59DC0AD30A3532AAD3889E /* Pods_CardTradeTests.framework */; };
-		DE140F6620DF03B0000547D5 /* dataset-original.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE140F6520DF03B0000547D5 /* dataset-original.jpg */; };
-		DE140F7020DF1931000547D5 /* casa-2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE140F6F20DF1931000547D5 /* casa-2.png */; };
-		DE140F7520DF19F5000547D5 /* notificacion-2.png in Resources */ = {isa = PBXBuildFile; fileRef = DE140F7220DF19F5000547D5 /* notificacion-2.png */; };
-		DE140F7620DF19F5000547D5 /* subasta.png in Resources */ = {isa = PBXBuildFile; fileRef = DE140F7320DF19F5000547D5 /* subasta.png */; };
-		DE140F7820DF1A6E000547D5 /* silueta-de-usuario.png in Resources */ = {isa = PBXBuildFile; fileRef = DE140F7720DF1A6E000547D5 /* silueta-de-usuario.png */; };
 		DE140F7F20DF4261000547D5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE140F7E20DF4261000547D5 /* User.swift */; };
 		DE140F8120DF45B3000547D5 /* profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE140F8020DF45B3000547D5 /* profile.swift */; };
 		DE140F8320DF493D000547D5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE140F8220DF493D000547D5 /* ProfileViewController.swift */; };
@@ -56,15 +56,15 @@
 		42183E96CD744EDD52F443C3 /* Pods_CardTrade.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardTrade.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C59DC0AD30A3532AAD3889E /* Pods_CardTradeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardTradeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E968F02DA06575BB8E6046C /* Pods-CardTrade.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardTrade.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardTrade/Pods-CardTrade.release.xcconfig"; sourceTree = "<group>"; };
+		7F71814020E11BE200C569F6 /* dataset-original.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dataset-original.jpg"; sourceTree = "<group>"; };
+		7F71814120E11BE200C569F6 /* casa-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "casa-2.png"; sourceTree = "<group>"; };
+		7F71814220E11BE200C569F6 /* subasta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subasta.png; sourceTree = "<group>"; };
+		7F71814320E11BE200C569F6 /* silueta-de-usuario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "silueta-de-usuario.png"; sourceTree = "<group>"; };
+		7F71814420E11BE300C569F6 /* notificacion-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notificacion-2.png"; sourceTree = "<group>"; };
 		80A1BAA0DC3DACBE9D2C3603 /* Pods-CardTradeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardTradeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardTradeUITests/Pods-CardTradeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8341D786B6DDD3A2703F1B98 /* Pods-CardTradeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardTradeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardTradeTests/Pods-CardTradeTests.release.xcconfig"; sourceTree = "<group>"; };
 		8C33B318B62B7F496EA0EC42 /* Pods-CardTradeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardTradeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardTradeUITests/Pods-CardTradeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A17FEA8135753A8F0FBA44C6 /* Pods-CardTrade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardTrade.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardTrade/Pods-CardTrade.debug.xcconfig"; sourceTree = "<group>"; };
-		DE140F6520DF03B0000547D5 /* dataset-original.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "dataset-original.jpg"; path = "../../../../Downloads/dataset-original.jpg"; sourceTree = "<group>"; };
-		DE140F6F20DF1931000547D5 /* casa-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "casa-2.png"; path = "../../../../Downloads/casa-2.png"; sourceTree = "<group>"; };
-		DE140F7220DF19F5000547D5 /* notificacion-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "notificacion-2.png"; path = "../../../../Downloads/notificacion-2.png"; sourceTree = "<group>"; };
-		DE140F7320DF19F5000547D5 /* subasta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = subasta.png; path = ../../../../Downloads/subasta.png; sourceTree = "<group>"; };
-		DE140F7720DF1A6E000547D5 /* silueta-de-usuario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "silueta-de-usuario.png"; path = "../../../../Downloads/silueta-de-usuario.png"; sourceTree = "<group>"; };
 		DE140F7E20DF4261000547D5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DE140F8020DF45B3000547D5 /* profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profile.swift; sourceTree = "<group>"; };
 		DE140F8220DF493D000547D5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +117,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F71813F20E11B1A00C569F6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7F71814120E11BE200C569F6 /* casa-2.png */,
+				7F71814020E11BE200C569F6 /* dataset-original.jpg */,
+				7F71814420E11BE300C569F6 /* notificacion-2.png */,
+				7F71814320E11BE200C569F6 /* silueta-de-usuario.png */,
+				7F71814220E11BE200C569F6 /* subasta.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		B07F7A7B48AC71AD6B5F2815 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,22 +152,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DE140F6420DF02F3000547D5 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				DE140F7720DF1A6E000547D5 /* silueta-de-usuario.png */,
-				DE140F6F20DF1931000547D5 /* casa-2.png */,
-				DE140F7220DF19F5000547D5 /* notificacion-2.png */,
-				DE140F7320DF19F5000547D5 /* subasta.png */,
-				DE140F6520DF03B0000547D5 /* dataset-original.jpg */,
-			);
-			path = images;
-			sourceTree = "<group>";
-		};
 		DE14509620D2E7C600C6A970 = {
 			isa = PBXGroup;
 			children = (
-				DE140F6420DF02F3000547D5 /* images */,
+				7F71813F20E11B1A00C569F6 /* Images */,
 				DEA5BCE220DEA4E000628166 /* Entities */,
 				DEA5BCE120DEA4D800628166 /* Controllers */,
 				DEA8050220D38B890049790F /* Podfile */,
@@ -340,14 +340,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE1450AD20D2E7C900C6A970 /* LaunchScreen.storyboard in Resources */,
-				DE140F6620DF03B0000547D5 /* dataset-original.jpg in Resources */,
-				DE140F7520DF19F5000547D5 /* notificacion-2.png in Resources */,
+				7F71814720E11BE300C569F6 /* subasta.png in Resources */,
+				7F71814920E11BE300C569F6 /* notificacion-2.png in Resources */,
+				7F71814520E11BE300C569F6 /* dataset-original.jpg in Resources */,
+				7F71814620E11BE300C569F6 /* casa-2.png in Resources */,
 				DE1450AA20D2E7C900C6A970 /* Assets.xcassets in Resources */,
-				DE140F7620DF19F5000547D5 /* subasta.png in Resources */,
-				DE140F7820DF1A6E000547D5 /* silueta-de-usuario.png in Resources */,
+				7F71814820E11BE300C569F6 /* silueta-de-usuario.png in Resources */,
 				DEA8050320D38B8A0049790F /* Podfile in Resources */,
 				DE1450A820D2E7C700C6A970 /* Main.storyboard in Resources */,
-				DE140F7020DF1931000547D5 /* casa-2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,16 +632,21 @@
 			baseConfigurationReference = A17FEA8135753A8F0FBA44C6 /* Pods-CardTrade.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CardTrade/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.CardTrade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -650,16 +655,21 @@
 			baseConfigurationReference = 5E968F02DA06575BB8E6046C /* Pods-CardTrade.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CardTrade/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.CardTrade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
