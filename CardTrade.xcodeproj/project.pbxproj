@@ -22,10 +22,13 @@
 		DE1450AD20D2E7C900C6A970 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1450AB20D2E7C900C6A970 /* LaunchScreen.storyboard */; };
 		DE1450B820D2E7C900C6A970 /* CardTradeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1450B720D2E7C900C6A970 /* CardTradeTests.swift */; };
 		DE1450C320D2E7C900C6A970 /* CardTradeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1450C220D2E7C900C6A970 /* CardTradeUITests.swift */; };
+		DE8AAE4620E07A1D002B0D6F /* Auction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8AAE4520E07A1D002B0D6F /* Auction.swift */; };
 		DEA5BCE420DEA4FB00628166 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5BCE320DEA4FB00628166 /* LoginViewController.swift */; };
 		DEA8050320D38B8A0049790F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DEA8050220D38B890049790F /* Podfile */; };
 		DEBD4AD020E003B400125512 /* RulesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD4ACF20E003B400125512 /* RulesTableViewController.swift */; };
 		DEBD4AD220E007F400125512 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD4AD120E007F400125512 /* Rules.swift */; };
+		DEDF012020E0979100063868 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF011F20E0979100063868 /* HomeViewController.swift */; };
+		DEDF012220E09E0600063868 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF012120E09E0600063868 /* HomeCollectionViewCell.swift */; };
 		FC1531183953A4F7BAA08F91 /* Pods_CardTrade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42183E96CD744EDD52F443C3 /* Pods_CardTrade.framework */; };
 		FCF2BCE051AEDE81067B75FE /* Pods_CardTradeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9E4A16DFE9F01EE35920EC /* Pods_CardTradeUITests.framework */; };
 /* End PBXBuildFile section */
@@ -77,10 +80,13 @@
 		DE1450BE20D2E7C900C6A970 /* CardTradeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardTradeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1450C220D2E7C900C6A970 /* CardTradeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTradeUITests.swift; sourceTree = "<group>"; };
 		DE1450C420D2E7C900C6A970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE8AAE4520E07A1D002B0D6F /* Auction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auction.swift; sourceTree = "<group>"; };
 		DEA5BCE320DEA4FB00628166 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DEA8050220D38B890049790F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DEBD4ACF20E003B400125512 /* RulesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesTableViewController.swift; sourceTree = "<group>"; };
 		DEBD4AD120E007F400125512 /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
+		DEDF011F20E0979100063868 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DEDF012120E09E0600063868 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +214,8 @@
 				DEA5BCE320DEA4FB00628166 /* LoginViewController.swift */,
 				DE140F8220DF493D000547D5 /* ProfileViewController.swift */,
 				DEBD4ACF20E003B400125512 /* RulesTableViewController.swift */,
+				DEDF011F20E0979100063868 /* HomeViewController.swift */,
+				DEDF012120E09E0600063868 /* HomeCollectionViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -218,6 +226,7 @@
 				DE140F7E20DF4261000547D5 /* User.swift */,
 				DE140F8020DF45B3000547D5 /* profile.swift */,
 				DEBD4AD120E007F400125512 /* Rules.swift */,
+				DE8AAE4520E07A1D002B0D6F /* Auction.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -443,7 +452,10 @@
 				DE140F7F20DF4261000547D5 /* User.swift in Sources */,
 				DEA5BCE420DEA4FB00628166 /* LoginViewController.swift in Sources */,
 				DE140F8320DF493D000547D5 /* ProfileViewController.swift in Sources */,
+				DE8AAE4620E07A1D002B0D6F /* Auction.swift in Sources */,
 				DE140F8120DF45B3000547D5 /* profile.swift in Sources */,
+				DEDF012220E09E0600063868 /* HomeCollectionViewCell.swift in Sources */,
+				DEDF012020E0979100063868 /* HomeViewController.swift in Sources */,
 				DE1450A320D2E7C700C6A970 /* AppDelegate.swift in Sources */,
 				DEBD4AD220E007F400125512 /* Rules.swift in Sources */,
 				DEBD4AD020E003B400125512 /* RulesTableViewController.swift in Sources */,
