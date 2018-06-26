@@ -11,13 +11,14 @@ import UIKit
 class Auction: NSObject {
     var calificationUser : Double = 0.0
     var userId : Int = 0
-    var cardNane : String  = ""
+    var cardName : String  = ""
     var userNameUserSeller : String = ""
-    var currentAmount : Double = 0.0
+    var currentAmount : Int = 0
     var beginDate : String = ""
     var endDate : String = ""
     var descriptionCard : String = ""
     var status : String = ""
     var type : String = ""
-    var amount : String = ""
+    var amount : Int = 0
+    var cardId : Int = 0
 }
