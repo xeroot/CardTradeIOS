@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class RulesTableViewController: UITableViewController {
-    
+    var app = CardTrade_AppConfing()
     var myRules = [Rules]()
 
     override func viewDidLoad() {
@@ -31,7 +31,7 @@ class RulesTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         self.myRules.removeAll()
-        Alamofire.request("http://192.168.1.2:45455/api/Rules").responseJSON{
+        Alamofire.request(app.API_HOST+"/Rules").responseJSON{
             response in
             if let json = response.result.value{
                 print("JSON: \(json)") // serialized json response

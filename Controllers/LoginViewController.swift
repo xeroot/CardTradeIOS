@@ -12,6 +12,7 @@ import SwiftyJSON
 
 class LoginViewController: UIViewController {
 
+    var app = CardTrade_AppConfing()
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
@@ -30,7 +31,7 @@ class LoginViewController: UIViewController {
     // ya :v
     @IBAction func btnLoginPressed(_ sender: Any) {
         //Validate login
-        Alamofire.request("http://192.168.1.2:45455/api/Users?username=" + txtUsername.text! + "&password=" + txtPassword.text!).responseJSON { response in
+        Alamofire.request(app.API_HOST+"/Users?username=" + txtUsername.text! + "&password=" + txtPassword.text!).responseJSON { response in
             print("Request: \(String(describing: response.request))")   // original url request
             print("Response: \(String(describing: response.response))") // http url response
             print("Result: \(response.result)")                         // response serialization result

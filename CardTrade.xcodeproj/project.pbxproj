@@ -23,6 +23,7 @@
 		DE1450B820D2E7C900C6A970 /* CardTradeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1450B720D2E7C900C6A970 /* CardTradeTests.swift */; };
 		DE1450C320D2E7C900C6A970 /* CardTradeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1450C220D2E7C900C6A970 /* CardTradeUITests.swift */; };
 		DE8AAE4620E07A1D002B0D6F /* Auction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8AAE4520E07A1D002B0D6F /* Auction.swift */; };
+		DE96551720E2B4FC0024454D /* CardTrade_AppConfing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96551620E2B4FC0024454D /* CardTrade_AppConfing.swift */; };
 		DEA5BCE420DEA4FB00628166 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA5BCE320DEA4FB00628166 /* LoginViewController.swift */; };
 		DEA8050320D38B8A0049790F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DEA8050220D38B890049790F /* Podfile */; };
 		DEBD4AD020E003B400125512 /* RulesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD4ACF20E003B400125512 /* RulesTableViewController.swift */; };
@@ -81,6 +82,7 @@
 		DE1450C220D2E7C900C6A970 /* CardTradeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTradeUITests.swift; sourceTree = "<group>"; };
 		DE1450C420D2E7C900C6A970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE8AAE4520E07A1D002B0D6F /* Auction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auction.swift; sourceTree = "<group>"; };
+		DE96551620E2B4FC0024454D /* CardTrade_AppConfing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTrade_AppConfing.swift; sourceTree = "<group>"; };
 		DEA5BCE320DEA4FB00628166 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DEA8050220D38B890049790F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DEBD4ACF20E003B400125512 /* RulesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesTableViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		DE14509620D2E7C600C6A970 = {
 			isa = PBXGroup;
 			children = (
+				DE96551620E2B4FC0024454D /* CardTrade_AppConfing.swift */,
 				7F71813F20E11B1A00C569F6 /* Images */,
 				DEA5BCE220DEA4E000628166 /* Entities */,
 				DEA5BCE120DEA4D800628166 /* Controllers */,
@@ -449,6 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE96551720E2B4FC0024454D /* CardTrade_AppConfing.swift in Sources */,
 				DE140F7F20DF4261000547D5 /* User.swift in Sources */,
 				DEA5BCE420DEA4FB00628166 /* LoginViewController.swift in Sources */,
 				DE140F8320DF493D000547D5 /* ProfileViewController.swift in Sources */,

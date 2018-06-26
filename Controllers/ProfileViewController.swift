@@ -12,6 +12,7 @@ import SwiftyJSON
 
 class ProfileViewController: UIViewController {
 
+    var app = CardTrade_AppConfing()
   
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtEmail: UITextField!
@@ -29,7 +30,7 @@ class ProfileViewController: UIViewController {
         let userDefaults = UserDefaults.standard
         let userId = userDefaults.integer(forKey: "UserId")
         print(userId)
-        Alamofire.request("http://192.168.1.2:45455/api/Profiles/" + String(userId)).responseJSON { response in
+        Alamofire.request(app.API_HOST+"/Profiles/" + String(userId)).responseJSON { response in
             if let json = response.result.value {
                 print("JSON: \(json)") // serialized json response
                 //Read json
