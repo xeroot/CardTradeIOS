@@ -9,6 +9,7 @@
 import UIKit
 
 class Auction: NSObject {
+    var id : Int = 0
     var calificationUser : Double = 0.0
     var userId : Int = 0
     var cardName : String  = ""

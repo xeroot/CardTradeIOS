@@ -28,16 +28,11 @@ class HomeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Setup the Search Controller
-        /*
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Auction"
-        navigationItem.searchController = searchController
-        definesPresentationContext = true
-        */
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
         // Alamo fire
+        allAuctions.removeAll()
         Alamofire.request(app.API_HOST+"/Auctions").responseJSON(){
             response in
             if let json = response.result.value {
@@ -55,18 +50,14 @@ class HomeTableViewController: UITableViewController {
                     auction.cardId = subJson["CardId"].intValue
                     auction.descriptionCard = subJson["DescriptionCard"].stringValue
                     auction.currentAmount = subJson["CurrentAmount"].intValue
+                    auction.id = subJson["Id"].intValue
                     self.allAuctions.append(auction)
                 }
                 self.tableView.reloadData()
             }
         }
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
