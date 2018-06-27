@@ -16,6 +16,7 @@ class HomeAuctionViewController: UIViewController {
     @IBOutlet weak var txtDescription: UILabel!
     @IBOutlet weak var txtTimeSpan: UILabel!
     @IBOutlet weak var txtCurrentAmount: UILabel!
+    @IBOutlet weak var inputAmount: UITextField!
     
     var auctionSelected = Auction()
     
@@ -25,9 +26,21 @@ class HomeAuctionViewController: UIViewController {
         txtUserName.text = auctionSelected.userNameUserSeller
         txtUserScore.text = String(auctionSelected.calificationUser)
         txtDescription.text = auctionSelected.descriptionCard
-        txtCurrentAmount.text = String(auctionSelected.currentAmount)
+        txtCurrentAmount.text = String(auctionSelected.currentAmount)+" Coins"
         
-        
+        // mostrar tiempo restante
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss" //2018-06-23T00:00:00
+        //let instaFormated : Date? = dateFormatter.date(from: iniDate)
+        let iniDate = Date()
+        let endDate = dateFormatter.date(from: auctionSelected.endDate)
+        let difference = endDate?.timeIntervalSince(iniDate)
+        let difH = Int(difference!/(60*60))
+        let difM = Int(difference!/(60))%60
+        let difS = Int(difference!)%60
+        let timespan = "Hours: "+String(difH)+", Minutes: "+String(difM)+", Seconds: "+String(difS)
+        print(timespan)
+        txtTimeSpan.text = timespan
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,6 +48,9 @@ class HomeAuctionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func btPujarPressed(_ sender: Any) {
+        
+    }
     /*
     // MARK: - Navigation
 
