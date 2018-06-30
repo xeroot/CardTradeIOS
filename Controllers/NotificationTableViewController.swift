@@ -12,24 +12,18 @@ import SwiftyJSON
 
 class NotificationTableViewController: UITableViewController {
     var app = CardTrade_AppConfing()
-    var auctionscurrent_users = [AuctionCurrentUsers]()
+    var auctionscurrent_users = [AuctionCurrentUsers]() // FULL
+    var auctionscurrent_usersAux = [AuctionCurrentUsers]()
     var mis_auctions = [Int]()
     var notificaciones = [Notification]()
-    var comments = [[String: String]]()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        getMyAuctions(myAuctions: <#T##String#>)
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-       // self.notificaciones = getNotifications(myAuctions: AuctionCurrentUsers)
-        
-    }
-    func getMyAuctions(myAuctions : String){
+        self.notificaciones.removeAll()
+        let userDefaults = UserDefaults.standard
+        let userId = userDefaults.integer(forKey: "UserId") //ok
+       
         Alamofire.request(app.API_HOST+"/AuctionsCurrentUsers").responseJSON{
             response in
             if let json = response.result.value{
@@ -43,23 +37,78 @@ class NotificationTableViewController: UITableViewController {
                     objAuCurrUsers.amount = subJson["amount"].intValue
                     objAuCurrUsers.idAuction = subJson["idAuction"].intValue
                     objAuCurrUsers.cardName = subJson["cardName"].stringValue
-                    self.auctionscurrent_users.append(objAuCurrUsers)
+                    self.auctionscurrent_usersAux.append(objAuCurrUsers) //
                 }
                 
+                for  item in self.auctionscurrent_usersAux{
+                    if(!self.mis_auctions.contains(item.idAuction) && item.idCurrentUser == userId){
+                        self.mis_auctions.append(item.idAuction)
+                    }
+                }
+                // listo ya llene los ids
+                // ahora el paso 3
+                for  item in self.mis_auctions{
+                    print(String(item))
+                }
+
+                for  a in self.mis_auctions{
+                    var last_user = userId
+                    var card_name = ""
+                    for  b in self.auctionscurrent_usersAux{
+                        if(b.idAuction == a){
+                            last_user = b.idCurrentUser
+                            card_name = b.cardName
+                        }
+                    }
+                    if(last_user != userId){
+                        let nueva_notificacion = Notification()
+                        nueva_notificacion.Name="Alguien te superó"
+                        nueva_notificacion.Description="Un usuario te superó al pujar más alto para la carta " + card_name
+                        self.notificaciones.append(nueva_notificacion)
+                    }
+                }
                 
+                // comprobacion
+                for  item in self.notificaciones{
+                    print(item.Name + " - " + item.Description)
+                }
                 self.tableView.reloadData()
+                
+                // hasta aqui todo bien, peeeero, puedes ir haciendo todo en uno xd, asi
+                
+           //     print(self.auctionscurrent_usersAux)
+                /*
+                for current in self.auctionscurrent_usersAux
+                {
+                    if(current.idCurrentUser  == userId)
+                    {
+                        let objAuCurrUsers = AuctionCurrentUsers()
+                        objAuCurrUsers.id  = current.id
+                        objAuCurrUsers.idCurrentUser  = current.idCurrentUser
+                        objAuCurrUsers.amount  = current.amount
+                        objAuCurrUsers.idAuction  = current.idAuction
+                        objAuCurrUsers.cardName  = current.cardName
+                        self.auctionscurrent_users.append(objAuCurrUsers)
+                    }
+                }
+                for  item1 in self.auctionscurrent_users{
+                    print("acaaa: " + String(item1.idCurrentUser))
+                    
+                }*/
             }
-            
-            guard let data = response.result.value else { return }
-            
-            let jsonData = JSON(data)
-            let currentUserAuctions = jsonData["post-comments"].arrayObject as! [[String:String]]
-            self.comments = currentUserAuctions.filter{$0["post"] != "new"}
-           /* dispatch_get_main_queue().async() {
-                self.tableView.reloadData()
-            }*/
         }
+        
+        
+        
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+       // self.notificaciones = getNotifications(myAuctions: AuctionCurrentUsers)
+        
     }
+    
     
     /*func getNotifications(myAuctions : AuctionCurrentUsers) -> [Notification](){
         
@@ -76,23 +125,25 @@ class NotificationTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return notificaciones.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "notificationCell", for: indexPath)
 
         // Configure the cell...
-
+        cell.textLabel?.text = notificaciones[indexPath.row].Name
+        cell.detailTextLabel?.text = notificaciones[indexPath.row].Description
+        cell.detailTextLabel?.numberOfLines = 0
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
