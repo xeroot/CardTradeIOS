@@ -71,6 +71,11 @@ class HomeAuctionViewController: UIViewController {
                     }))
                     self.present(alert, animated: true, completion: nil)
                 }
+                else if(response.response?.statusCode == 306){
+                    let alert = UIAlertController(title: "Fail!", message: "You dont have coins enought!!", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
                 else{
                     let alert = UIAlertController(title: "Fail!", message: "Something went wrong! Please try again!", preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))

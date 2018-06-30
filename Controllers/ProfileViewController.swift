@@ -71,6 +71,10 @@ class ProfileViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        viewDidLoad()
+    }
+    
     @IBOutlet weak var centerPopup: NSLayoutConstraint!
     @IBAction func cancelLogout(_ sender: Any) {
         PopupView.isHidden = true

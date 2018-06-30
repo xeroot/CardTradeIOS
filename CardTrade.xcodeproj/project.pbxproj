@@ -22,6 +22,9 @@
 		DE1450AD20D2E7C900C6A970 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1450AB20D2E7C900C6A970 /* LaunchScreen.storyboard */; };
 		DE1450B820D2E7C900C6A970 /* CardTradeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1450B720D2E7C900C6A970 /* CardTradeTests.swift */; };
 		DE1450C320D2E7C900C6A970 /* CardTradeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1450C220D2E7C900C6A970 /* CardTradeUITests.swift */; };
+		DE83A50D20E72EFD0021E44D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83A50C20E72EFD0021E44D /* RegisterViewController.swift */; };
+		DE83A50F20E74EEB0021E44D /* CreateAuctionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83A50E20E74EEB0021E44D /* CreateAuctionViewController.swift */; };
+		DE83A51120E752500021E44D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE83A51020E752500021E44D /* Card.swift */; };
 		DE8AAE4620E07A1D002B0D6F /* Auction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8AAE4520E07A1D002B0D6F /* Auction.swift */; };
 		DE96551720E2B4FC0024454D /* CardTrade_AppConfing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96551620E2B4FC0024454D /* CardTrade_AppConfing.swift */; };
 		DE96551920E2B8E30024454D /* card_magic_template.png in Resources */ = {isa = PBXBuildFile; fileRef = DE96551820E2B8E30024454D /* card_magic_template.png */; };
@@ -85,6 +88,9 @@
 		DE1450BE20D2E7C900C6A970 /* CardTradeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardTradeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1450C220D2E7C900C6A970 /* CardTradeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTradeUITests.swift; sourceTree = "<group>"; };
 		DE1450C420D2E7C900C6A970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE83A50C20E72EFD0021E44D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		DE83A50E20E74EEB0021E44D /* CreateAuctionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAuctionViewController.swift; sourceTree = "<group>"; };
+		DE83A51020E752500021E44D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		DE8AAE4520E07A1D002B0D6F /* Auction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auction.swift; sourceTree = "<group>"; };
 		DE96551620E2B4FC0024454D /* CardTrade_AppConfing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTrade_AppConfing.swift; sourceTree = "<group>"; };
 		DE96551820E2B8E30024454D /* card_magic_template.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_magic_template.png; sourceTree = "<group>"; };
@@ -229,6 +235,8 @@
 				DE96551A20E2BB320024454D /* HomeTableViewController.swift */,
 				DE96551C20E2E0200024454D /* HomeAuctionViewController.swift */,
 				DEFD491920E6ABF800CB1C4B /* NotificationTableViewController.swift */,
+				DE83A50C20E72EFD0021E44D /* RegisterViewController.swift */,
+				DE83A50E20E74EEB0021E44D /* CreateAuctionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -242,6 +250,7 @@
 				DE8AAE4520E07A1D002B0D6F /* Auction.swift */,
 				DEFD491720E6AB5700CB1C4B /* Notification.swift */,
 				DEFD491B20E6F44800CB1C4B /* AuctionCurrentUsers.swift */,
+				DE83A51020E752500021E44D /* Card.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -471,6 +480,9 @@
 				DE96551720E2B4FC0024454D /* CardTrade_AppConfing.swift in Sources */,
 				DE140F7F20DF4261000547D5 /* User.swift in Sources */,
 				DEA5BCE420DEA4FB00628166 /* LoginViewController.swift in Sources */,
+				DE83A51120E752500021E44D /* Card.swift in Sources */,
+				DE83A50F20E74EEB0021E44D /* CreateAuctionViewController.swift in Sources */,
+				DE83A50D20E72EFD0021E44D /* RegisterViewController.swift in Sources */,
 				DE140F8320DF493D000547D5 /* ProfileViewController.swift in Sources */,
 				DEFD491820E6AB5700CB1C4B /* Notification.swift in Sources */,
 				DE8AAE4620E07A1D002B0D6F /* Auction.swift in Sources */,

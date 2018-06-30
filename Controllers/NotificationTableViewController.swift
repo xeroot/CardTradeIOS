@@ -12,7 +12,6 @@ import SwiftyJSON
 
 class NotificationTableViewController: UITableViewController {
     var app = CardTrade_AppConfing()
-    var auctionscurrent_users = [AuctionCurrentUsers]() // FULL
     var auctionscurrent_usersAux = [AuctionCurrentUsers]()
     var mis_auctions = [Int]()
     var notificaciones = [Notification]()
@@ -20,15 +19,20 @@ class NotificationTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
         self.notificaciones.removeAll()
+        self.auctionscurrent_usersAux.removeAll()
+        self.mis_auctions.removeAll()
+        
         let userDefaults = UserDefaults.standard
-        let userId = userDefaults.integer(forKey: "UserId") //ok
-       
+        let userId = userDefaults.integer(forKey: "UserId")
+        
         Alamofire.request(app.API_HOST+"/AuctionsCurrentUsers").responseJSON{
             response in
             if let json = response.result.value{
-                print("JSON: \(json)") // serialized json response
-                //Read json
+                print("JSON: \(json)")
                 let sJson = JSON(json)
                 for(_,subJson):(String,JSON) in sJson{
                     let objAuCurrUsers = AuctionCurrentUsers()
@@ -50,7 +54,7 @@ class NotificationTableViewController: UITableViewController {
                 for  item in self.mis_auctions{
                     print(String(item))
                 }
-
+                
                 for  a in self.mis_auctions{
                     var last_user = userId
                     var card_name = ""
@@ -73,47 +77,9 @@ class NotificationTableViewController: UITableViewController {
                     print(item.Name + " - " + item.Description)
                 }
                 self.tableView.reloadData()
-                
-                // hasta aqui todo bien, peeeero, puedes ir haciendo todo en uno xd, asi
-                
-           //     print(self.auctionscurrent_usersAux)
-                /*
-                for current in self.auctionscurrent_usersAux
-                {
-                    if(current.idCurrentUser  == userId)
-                    {
-                        let objAuCurrUsers = AuctionCurrentUsers()
-                        objAuCurrUsers.id  = current.id
-                        objAuCurrUsers.idCurrentUser  = current.idCurrentUser
-                        objAuCurrUsers.amount  = current.amount
-                        objAuCurrUsers.idAuction  = current.idAuction
-                        objAuCurrUsers.cardName  = current.cardName
-                        self.auctionscurrent_users.append(objAuCurrUsers)
-                    }
-                }
-                for  item1 in self.auctionscurrent_users{
-                    print("acaaa: " + String(item1.idCurrentUser))
-                    
-                }*/
             }
         }
-        
-        
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-       // self.notificaciones = getNotifications(myAuctions: AuctionCurrentUsers)
-        
     }
-    
-    
-    /*func getNotifications(myAuctions : AuctionCurrentUsers) -> [Notification](){
-        
-        return nil
-    }*/
     
 
     override func didReceiveMemoryWarning() {
