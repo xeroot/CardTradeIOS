@@ -23,7 +23,12 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var txtRating: UITextField!
     @IBOutlet weak var txtAddress: UITextField!
     let myProfile = profile()
+    var Status = ""
+    var type = ""
+    var idUser = ""
     
+    
+    @IBOutlet weak var UpdatepoUpView: UIView!
     @IBOutlet weak var PopupView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +49,9 @@ class ProfileViewController: UIViewController {
                 self.myProfile.Coins = sJson["Coins"].intValue
                 self.myProfile.Rating = sJson["Rating"].doubleValue
                 self.myProfile.Address = sJson["Address"].stringValue
+                self.Status = sJson["Status"].stringValue
+                self.type = sJson["Type"].stringValue
+                self.idUser = sJson["IdUser"].stringValue
                 
                 self.txtName.text =  self.myProfile.Name
                 self.txtEmail.text =  self.myProfile.Email
@@ -57,6 +65,10 @@ class ProfileViewController: UIViewController {
         }
         PopupView.layer.cornerRadius = 10
         PopupView.layer.masksToBounds = true
+        
+        UpdatepoUpView.layer.cornerRadius = 10
+        UpdatepoUpView.layer.masksToBounds = true
+        
     }
     
     @IBOutlet weak var centerPopup: NSLayoutConstraint!
@@ -66,10 +78,57 @@ class ProfileViewController: UIViewController {
         
     }
     
+    @IBAction func cancelUpdateprofile(_ sender: Any) {
+        UpdatepoUpView.isHidden = true
+    }
     @IBAction func ShowPopup(_ sender: Any) {
         PopupView.isHidden = false
         
        
+    }
+    
+    @IBAction func UpdateProfilePressed(_ sender: Any) {
+        
+        UpdatepoUpView.isHidden = false
+    }
+    
+    
+    @IBAction func btnUpdateInformation(_ sender: Any) {
+        
+        let userDefaults = UserDefaults.standard
+        let userId = userDefaults.integer(forKey: "UserId")
+        
+        let parameters : Parameters = [
+            "Id" : userId,
+            "Name": txtName.text!,
+            "Type": type,
+            "Status": Status,
+            "Email": txtEmail.text!,
+            "Phone": txtPhone.text!,
+            "Age": txtAge.text!,
+            "Sex": txtGender.text!,
+            "Coins": txtCoin.text!,
+            "Rating": txtRating.text!,
+            "Address": txtAddress.text!,            
+            "IdUser": idUser
+        ]
+        print(parameters)
+        Alamofire.request(app.API_HOST+"/Profiles/" + String(userId) , method: .put, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+            if(response.response?.statusCode == 200){
+                let alert = UIAlertController(title: "SUCCESS", message: "Tu actualizacion ha sido exitosa", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {
+                    (action: UIAlertAction!) in
+                   // self.navigationController?.popViewController(animated: true)
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
+            else{
+                let alert = UIAlertController(title: "Fail!", message: "Ups Algo salió mal, intenta denuevo", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+        UpdatepoUpView.isHidden = true
     }
     
     override func didReceiveMemoryWarning() {

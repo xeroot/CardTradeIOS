@@ -18,16 +18,18 @@ extension UITableViewController: UISearchResultsUpdating {
     }
 }*/
 
-class HomeTableViewController: UITableViewController {
+class HomeTableViewController: UITableViewController, UISearchBarDelegate{
 
     var app = CardTrade_AppConfing()
-    var allAuctions = [Auction]()
     var selectedRow : Int = 0
+    @IBOutlet weak var searchBar: UISearchBar!
+    var allAuctions = [Auction]()
+    var filteredAuctions = [Auction]()
     
-    //let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -53,9 +55,12 @@ class HomeTableViewController: UITableViewController {
                     auction.id = subJson["Id"].intValue
                     self.allAuctions.append(auction)
                 }
+                self.filteredAuctions = self.allAuctions
                 self.tableView.reloadData()
             }
         }
+        //self.filteredAuctions = self.allAuctions
+        //self.tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -72,26 +77,34 @@ class HomeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return allAuctions.count
+        return filteredAuctions.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "auctionCell", for: indexPath)
         // Configure the cell...
-        let detalle : String = "Current Amount: "+String(allAuctions[indexPath.row].currentAmount)+" - End Date: "+allAuctions[indexPath.row].endDate
+        var detalle : String = "Current Amount: "+String(filteredAuctions[indexPath.row].currentAmount)+" \nEnd Date: "+filteredAuctions[indexPath.row].endDate
+        detalle = detalle.replacingOccurrences(of: "T", with: " ")
+        cell.detailTextLabel?.numberOfLines=2;
         cell.detailTextLabel?.text = detalle
-        cell.textLabel?.text = allAuctions[indexPath.row].cardName
-        
+        cell.textLabel?.text = filteredAuctions[indexPath.row].cardName
         return cell
     }
-    
-
     
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedRow = indexPath.row
         performSegue(withIdentifier: "showItem", sender: self)
+    }
+    
+    // This method updates filteredData based on the text in the Search Box
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredAuctions = searchText.isEmpty ? allAuctions : allAuctions.filter { (item: Auction) -> Bool in
+            // If dataItem matches the searchText, return true to include it
+            return item.cardName.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+        }
+        tableView.reloadData()
     }
  
     /*
@@ -134,7 +147,7 @@ class HomeTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         if(segue.identifier == "showItem"){
             if let nextController = segue.destination as? HomeAuctionViewController{
-                nextController.auctionSelected = allAuctions[self.selectedRow]
+                nextController.auctionSelected = filteredAuctions[self.selectedRow]
             }
         }
     }

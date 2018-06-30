@@ -12,6 +12,6 @@ class CardTrade_AppConfing: UIView {
 
     //var URL : String = "http://192.168.1.2"
     //var PORT : String = "45455"
-    var API_HOST : String = "http://192.168.1.3:45455/api"
+    var API_HOST : String = "http://192.168.1.2:45455/api"
 
 }

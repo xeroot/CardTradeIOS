@@ -31,6 +31,9 @@
 		DEA8050320D38B8A0049790F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DEA8050220D38B890049790F /* Podfile */; };
 		DEBD4AD020E003B400125512 /* RulesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD4ACF20E003B400125512 /* RulesTableViewController.swift */; };
 		DEBD4AD220E007F400125512 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD4AD120E007F400125512 /* Rules.swift */; };
+		DEFD491820E6AB5700CB1C4B /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFD491720E6AB5700CB1C4B /* Notification.swift */; };
+		DEFD491A20E6ABF800CB1C4B /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFD491920E6ABF800CB1C4B /* NotificationTableViewController.swift */; };
+		DEFD491C20E6F44800CB1C4B /* AuctionCurrentUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFD491B20E6F44800CB1C4B /* AuctionCurrentUsers.swift */; };
 		FC1531183953A4F7BAA08F91 /* Pods_CardTrade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42183E96CD744EDD52F443C3 /* Pods_CardTrade.framework */; };
 		FCF2BCE051AEDE81067B75FE /* Pods_CardTradeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9E4A16DFE9F01EE35920EC /* Pods_CardTradeUITests.framework */; };
 /* End PBXBuildFile section */
@@ -91,6 +94,9 @@
 		DEA8050220D38B890049790F /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DEBD4ACF20E003B400125512 /* RulesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesTableViewController.swift; sourceTree = "<group>"; };
 		DEBD4AD120E007F400125512 /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
+		DEFD491720E6AB5700CB1C4B /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		DEFD491920E6ABF800CB1C4B /* NotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewController.swift; sourceTree = "<group>"; };
+		DEFD491B20E6F44800CB1C4B /* AuctionCurrentUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionCurrentUsers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +228,7 @@
 				DEBD4ACF20E003B400125512 /* RulesTableViewController.swift */,
 				DE96551A20E2BB320024454D /* HomeTableViewController.swift */,
 				DE96551C20E2E0200024454D /* HomeAuctionViewController.swift */,
+				DEFD491920E6ABF800CB1C4B /* NotificationTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -233,6 +240,8 @@
 				DE140F8020DF45B3000547D5 /* profile.swift */,
 				DEBD4AD120E007F400125512 /* Rules.swift */,
 				DE8AAE4520E07A1D002B0D6F /* Auction.swift */,
+				DEFD491720E6AB5700CB1C4B /* Notification.swift */,
+				DEFD491B20E6F44800CB1C4B /* AuctionCurrentUsers.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -456,14 +465,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEFD491A20E6ABF800CB1C4B /* NotificationTableViewController.swift in Sources */,
 				DE96551B20E2BB320024454D /* HomeTableViewController.swift in Sources */,
 				DE96551D20E2E0200024454D /* HomeAuctionViewController.swift in Sources */,
 				DE96551720E2B4FC0024454D /* CardTrade_AppConfing.swift in Sources */,
 				DE140F7F20DF4261000547D5 /* User.swift in Sources */,
 				DEA5BCE420DEA4FB00628166 /* LoginViewController.swift in Sources */,
 				DE140F8320DF493D000547D5 /* ProfileViewController.swift in Sources */,
+				DEFD491820E6AB5700CB1C4B /* Notification.swift in Sources */,
 				DE8AAE4620E07A1D002B0D6F /* Auction.swift in Sources */,
 				DE140F8120DF45B3000547D5 /* profile.swift in Sources */,
+				DEFD491C20E6F44800CB1C4B /* AuctionCurrentUsers.swift in Sources */,
 				DE1450A320D2E7C700C6A970 /* AppDelegate.swift in Sources */,
 				DEBD4AD220E007F400125512 /* Rules.swift in Sources */,
 				DEBD4AD020E003B400125512 /* RulesTableViewController.swift in Sources */,
