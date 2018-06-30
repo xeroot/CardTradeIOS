@@ -71,19 +71,24 @@ class CreateAuctionViewController: UIViewController,UIPickerViewDelegate,UIPicke
         cardId = objCard.idCard
         
         //get end data
-        var endDate: String = ""
-        //endDate = String(pickerEndDate.date)
-
+       var endDate: String = ""
         
+        let dateFormater  = DateFormatter()
+        dateFormater.dateFormat =  "YYYY-MM-dd"
+        endDate = dateFormater.string(from:  pickerEndDate.date)
+       // txtMinValue.text = endDate
         
+        // LISTO
         //Get user
         let userDefaults = UserDefaults.standard
         let userId : Int = userDefaults.integer(forKey: "UserId")
         
         //Set parameters
-        /*let parameters : Parameters = [ "amount" : Double(self.txtMinValue.text!) ?? 0, "Tradable" : self.swtTradable.isOn, "Status" : "active", "UserId" : userId, "idCard" : cardId]
         
-        Alamofire.request("http://vmdev1.nexolink.com:90/TruequeAppAPI/api/Items", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+        let parameters : Parameters = ["idCard" : cardId,"idUserSeller" : userId, "endDate": endDate
+            ,"amount" : Double(self.txtMinValue.text!) ?? 0, "status" : "active", "type":"normal" ,"currentAmount": Double(self.txtMinValue.text!) ?? 0]
+        
+        Alamofire.request(app.API_HOST+"/Auctions", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
             print("Request: \(String(describing: response.request))")   // original url request
             print("Response: \(String(describing: response.response))") // http url response
             print("Result: \(response.result)")                         // response serialization result
@@ -95,8 +100,13 @@ class CreateAuctionViewController: UIViewController,UIPickerViewDelegate,UIPicke
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
                 break;
-            case .success:                    self.navigationController?.popViewController(animated: true)
-            break;*/
+            case .success:
+                self.navigationController?.popViewController(animated: true)
+                self.txtMinValue.text=""
+            break;
     }
     
+}
+
+}
 }
